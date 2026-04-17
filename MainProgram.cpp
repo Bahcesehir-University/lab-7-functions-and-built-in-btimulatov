@@ -29,6 +29,13 @@ float celsiusToFahrenheit(float c){
 }
 
 bool isPrime(int n){
+    if(n == 1){
+        return false;
+    } else if(n == 0){
+        return false;
+    } else if (n < 0){
+        return false;
+    }
     for(int i = 2; i <= sqrt(n); i++){
         if(n % i == 0){
             return false;
@@ -48,8 +55,8 @@ int maxOfThree(int a, int b, int c){
 }
 
 double average(double arr[], int size){
-    int sum = 0;
-    int aver;
+    double sum = 0;
+    double aver;
     for(int i = 0; i < size; i++){
         sum += arr[i];
     }
